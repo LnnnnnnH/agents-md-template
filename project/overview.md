@@ -7,7 +7,7 @@
 
 - 只写事实，不要写空洞形容词。
 - 不做什么要写清楚，避免 Agent 把范围做大。
-- 本页不是架构说明，模块和数据流写在 `architecture.md`。
+- 本页不是架构说明，模块和数据流写在 `architecture/architecture.md`。
 
 ## 填写
 
