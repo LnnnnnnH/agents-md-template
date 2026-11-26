@@ -1,10 +1,10 @@
 # 标准 AGENTS.md 模板
 
-这是一份跨项目复用的编码 Agent 说明骨架。新项目复制根目录的 `AGENT.md`、`AGENTS.md` 和整个 `agents/` 目录，只填写各文件中标记为「填写」的部分，不要让 AI 重新生成整套结构。
+这是一份跨项目复用的编码 Agent 说明骨架。新项目复制根目录的 `AGENTS.md` 和各职责文档，只填写各文件中标记为「填写」的部分，不要让 AI 重新生成整套结构。
 
-## 为什么这样拆
+## 为什么是这一套文件
 
-行业与 Cursor 当前约定的自动加载文件名是 `AGENTS.md`（有 s）。Cursor、Codex 等会自动加载它。`AGENT.md` 是入口和文档地图，指向 `AGENTS.md` 与 `agents/` 下按职责拆开的文件，避免每个项目、每个窗口各写一套，也避免把所有内容堆在单一文件里。
+行业与 Cursor 当前约定的自动加载文件名是 `AGENTS.md`（有 s）。Cursor、Codex 等会自动加载它。本模板只保留这一个入口，不再使用 `AGENT.md`。项目细节按职责拆到同目录的其他 markdown 文件，不放进子文件夹，避免每个项目、每个窗口各写一套，也避免把所有内容堆在单一文件里。
 
 官方说明：
 
@@ -13,20 +13,19 @@
 
 ## 文件结构
 
-- `AGENT.md`：入口和文档地图，不写项目细节。
-- `AGENTS.md`：自动加载的总则。阅读顺序和固定规则，所有项目保持一致。
-- `agents/`：项目细节，一份文件只承担一种职责。某项不适用就写「本项目暂无」，不要删文件。
+- `AGENTS.md`：唯一入口，也是自动加载的总则。文档地图、阅读顺序和固定规则，所有项目保持一致。
+- 同目录的职责文档：一份文件只承担一种职责。某项不适用就写「本项目暂无」，不要删文件，也不要放进子文件夹。
 
-`agents/` 里包括：概述、架构、仓库地图、命令、约束、写法约定、任务进度、踩坑、验证、测试、安全、Git 约定、决策、接口、运维、术语、责任人。
+职责文档包括：`overview.md`、`architecture.md`、`repo-map.md`、`commands.md`、`constraints.md`、`conventions.md`、`progress.md`、`pitfalls.md`、`verification.md`、`testing.md`、`security.md`、`git.md`、`decisions.md`、`interfaces.md`、`operations.md`、`glossary.md`、`owners.md`。
 
 ## 新项目怎么用
 
-1. 把 `AGENT.md`、`AGENTS.md` 和整个 `agents/` 目录放到仓库根目录。
+1. 把 `AGENTS.md` 和上述职责文档放到仓库根目录，不要放进子文件夹。
 2. 只改各文件的「填写」部分。先填 `overview.md`、`repo-map.md`、`commands.md`、`constraints.md`、`verification.md`、`git.md`；其余没有内容的写「本项目暂无」。
-3. `AGENTS.md` 的阅读顺序和固定规则、各文件开头的「用途 / 何时阅读 / 规则」不要改，不要删标题，不要调换章节或文件。
+3. `AGENTS.md` 的文档地图、阅读顺序和固定规则，以及各文件开头的「用途 / 何时阅读 / 规则」不要改，不要删标题，不要调换章节或文件。
 4. 每个需求开一个新的 Agent 窗口；窗口开始后先读根目录 `AGENTS.md`，再按阅读顺序读必读文件。若在子目录工作，再读离文件最近的那份 `AGENTS.md`。
 5. 子项目需要不同约定时，在该目录再放一份增量 `AGENTS.md`，只写差异，不要复制根文件全文。更近的文件优先，用户在对话里的明确要求压过文档。
-6. 任务结束后更新 `agents/progress.md`；确认了新的踩坑点，再追加到 `agents/pitfalls.md`。
+6. 任务结束后更新 `progress.md`；确认了新的踩坑点，再追加到 `pitfalls.md`。
 
 ## 这份文件不能保证什么
 
@@ -37,4 +36,5 @@
 - 不要每开一个项目就让 AI 从零再写一份 AGENT 文档。
 - 不要把 README（给人看的）和 AGENTS.md（给 Agent 看的）混成一篇。
 - 不要在功能开发任务里顺手改这套骨架的文件划分或章节结构。
-- 不要把架构、进度、踩坑、约束重新写回 `AGENT.md` 或 `AGENTS.md`。
+- 不要再创建 `AGENT.md`，也不要把职责文档放进子文件夹。
+- 不要把架构、进度、踩坑、约束重新写回 `AGENTS.md`。
