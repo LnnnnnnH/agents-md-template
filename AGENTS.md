@@ -31,6 +31,7 @@
 - [development/testing.md](./development/testing.md)：测试策略、目录和必要覆盖。
 - [development/verification.md](./development/verification.md)：声称完成前必须实际执行的验证。
 - [development/git.md](./development/git.md)：分支、提交说明、PR 约定。
+- [development/remediation.md](./development/remediation.md)：定期代码整改检查清单。
 
 ### `handoff/`：跨窗口交接
 
@@ -62,6 +63,7 @@
 - 找不到文件或入口：`project/repo-map.md`
 - 要安装、运行或复现：`development/commands.md`、`development/testing.md`
 - 写代码：`development/conventions.md`
+- 定期代码整改：`development/remediation.md`
 - 涉及密钥、权限、外发、生产数据：`operations/security.md`
 - 要提交或开 PR：`development/git.md`
 - 涉及部署或环境：`operations/operations.md`

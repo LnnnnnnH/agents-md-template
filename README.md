@@ -20,7 +20,7 @@
 
 - `project/`：`overview.md`、`repo-map.md`、`glossary.md`、`owners.md`
 - `architecture/`：`architecture.md`、`decisions.md`、`interfaces.md`
-- `development/`：`commands.md`、`constraints.md`、`conventions.md`、`testing.md`、`verification.md`、`git.md`
+- `development/`：`commands.md`、`constraints.md`、`conventions.md`、`testing.md`、`verification.md`、`git.md`、`remediation.md`
 - `handoff/`：`progress.md`、`pitfalls.md`
 - `operations/`：`security.md`、`operations.md`
 
